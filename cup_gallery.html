@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杯子图片集合</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .cup-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .cup-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .cup-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .cup-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .cup-svg {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        
+        /* 杯子1 - 经典马克杯 */
+        .cup1 {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+        }
+        
+        /* 杯子2 - 咖啡杯 */
+        .cup2 {
+            background: linear-gradient(135deg, #d63031, #a4161a);
+        }
+        
+        /* 杯子3 - 茶杯 */
+        .cup3 {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
+        }
+        
+        /* 杯子4 - 运动水杯 */
+        .cup4 {
+            background: linear-gradient(135deg, #00b894, #00a085);
+        }
+        
+        .download-btn {
+            background: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: #5f4fcf;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🥤 杯子图片集合</h1>
+        
+        <div class="cup-gallery">
+            <!-- 杯子1: 经典马克杯 -->
+            <div class="cup-card">
+                <h3 class="cup-title">经典马克杯</h3>
+                <svg class="cup-svg" viewBox="0 0 200 200">
+                    <!-- 杯身 -->
+                    <rect x="60" y="80" width="80" height="100" fill="#74b9ff" stroke="#0984e3" stroke-width="3" rx="5"/>
+                    <!-- 杯底 -->
+                    <ellipse cx="100" cy="180" rx="40" ry="8" fill="#74b9ff" stroke="#0984e3" stroke-width="3"/>
+                    <!-- 杯口 -->
+                    <ellipse cx="100" cy="80" rx="40" ry="8" fill="#ffffff" stroke="#0984e3" stroke-width="3"/>
+                    <!-- 把手 -->
+                    <path d="M 140 120 Q 165 120 165 140 Q 165 160 140 160" fill="none" stroke="#0984e3" stroke-width="4"/>
+                    <!-- 装饰心形 -->
+                    <circle cx="100" cy="130" r="12" fill="#e17055"/>
+                    <text x="100" y="135" text-anchor="middle" fill="white" font-size="12">❤</text>
+                </svg>
+                <button class="download-btn" onclick="downloadSVG('cup1', '经典马克杯')">下载图片</button>
+            </div>
+            
+            <!-- 杯子2: 咖啡杯 -->
+            <div class="cup-card">
+                <h3 class="cup-title">咖啡杯</h3>
+                <svg class="cup-svg" viewBox="0 0 200 200">
+                    <!-- 托盘 -->
+                    <ellipse cx="100" cy="175" rx="70" ry="15" fill="#ddd2c0" stroke="#8b4513" stroke-width="2"/>
+                    <!-- 杯身 -->
+                    <path d="M 70 170 L 130 170 L 125 90 L 75 90 Z" fill="#8b4513" stroke="#654321" stroke-width="3"/>
+                    <!-- 杯底 -->
+                    <ellipse cx="100" cy="170" rx="30" ry="6" fill="#8b4513" stroke="#654321" stroke-width="3"/>
+                    <!-- 杯口(咖啡) -->
+                    <ellipse cx="100" cy="90" rx="25" ry="5" fill="#2d1810"/>
+                    <!-- 把手 -->
+                    <path d="M 130 130 Q 150 130 150 145 Q 150 160 130 160" fill="none" stroke="#654321" stroke-width="4"/>
+                    <!-- 蒸汽 -->
+                    <path d="M 90 75 Q 90 65 95 70 Q 95 60 100 65 Q 100 55 105 60" fill="none" stroke="#999" stroke-width="2" opacity="0.7"/>
+                    <path d="M 105 75 Q 105 65 110 70 Q 110 60 115 65 Q 115 55 120 60" fill="none" stroke="#999" stroke-width="2" opacity="0.7"/>
+                </svg>
+                <button class="download-btn" onclick="downloadSVG('cup2', '咖啡杯')">下载图片</button>
+            </div>
+            
+            <!-- 杯子3: 精致茶杯 -->
+            <div class="cup-card">
+                <h3 class="cup-title">精致茶杯</h3>
+                <svg class="cup-svg" viewBox="0 0 200 200">
+                    <!-- 托盘 -->
+                    <ellipse cx="100" cy="175" rx="75" ry="12" fill="#f8e7ff" stroke="#e84393" stroke-width="2"/>
+                    <!-- 杯身 -->
+                    <path d="M 75 170 Q 75 100 100 100 Q 125 100 125 170" fill="#fd79a8" stroke="#e84393" stroke-width="3"/>
+                    <!-- 杯底 -->
+                    <ellipse cx="100" cy="170" rx="25" ry="5" fill="#fd79a8" stroke="#e84393" stroke-width="3"/>
+                    <!-- 杯口 -->
+                    <ellipse cx="100" cy="100" rx="25" ry="5" fill="#ffffff" stroke="#e84393" stroke-width="3"/>
+                    <!-- 精致把手 -->
+                    <path d="M 125 135 Q 140 135 140 145 Q 140 155 125 155" fill="none" stroke="#e84393" stroke-width="3"/>
+                    <!-- 花朵装饰 -->
+                    <circle cx="100" cy="135" r="3" fill="#ffd700"/>
+                    <circle cx="90" cy="125" r="2" fill="#ffd700"/>
+                    <circle cx="110" cy="125" r="2" fill="#ffd700"/>
+                    <circle cx="95" cy="145" r="2" fill="#ffd700"/>
+                    <circle cx="105" cy="145" r="2" fill="#ffd700"/>
+                </svg>
+                <button class="download-btn" onclick="downloadSVG('cup3', '精致茶杯')">下载图片</button>
+            </div>
+            
+            <!-- 杯子4: 运动水杯 -->
+            <div class="cup-card">
+                <h3 class="cup-title">运动水杯</h3>
+                <svg class="cup-svg" viewBox="0 0 200 200">
+                    <!-- 杯身 -->
+                    <rect x="75" y="70" width="50" height="110" fill="#00b894" stroke="#00a085" stroke-width="3" rx="5"/>
+                    <!-- 杯底 -->
+                    <ellipse cx="100" cy="180" rx="25" ry="6" fill="#00b894" stroke="#00a085" stroke-width="3"/>
+                    <!-- 杯盖 -->
+                    <ellipse cx="100" cy="70" rx="25" ry="6" fill="#00a085" stroke="#006b5a" stroke-width="3"/>
+                    <!-- 吸管 -->
+                    <rect x="108" y="50" width="4" height="30" fill="#e17055" stroke="#d63031" stroke-width="1"/>
+                    <!-- 握把纹理 -->
+                    <line x1="75" y1="100" x2="125" y2="100" stroke="#00a085" stroke-width="1" opacity="0.5"/>
+                    <line x1="75" y1="110" x2="125" y2="110" stroke="#00a085" stroke-width="1" opacity="0.5"/>
+                    <line x1="75" y1="120" x2="125" y2="120" stroke="#00a085" stroke-width="1" opacity="0.5"/>
+                    <line x1="75" y1="130" x2="125" y2="130" stroke="#00a085" stroke-width="1" opacity="0.5"/>
+                    <line x1="75" y1="140" x2="125" y2="140" stroke="#00a085" stroke-width="1" opacity="0.5"/>
+                    <line x1="75" y1="150" x2="125" y2="150" stroke="#00a085" stroke-width="1" opacity="0.5"/>
+                    <line x1="75" y1="160" x2="125" y2="160" stroke="#00a085" stroke-width="1" opacity="0.5"/>
+                    <!-- 品牌标志 -->
+                    <circle cx="100" cy="125" r="15" fill="white" stroke="#00a085" stroke-width="2"/>
+                    <circle cx="100" cy="125" r="8" fill="#00a085"/>
+                    <text x="100" y="130" text-anchor="middle" fill="white" font-size="10" font-weight="bold">S</text>
+                </svg>
+                <button class="download-btn" onclick="downloadSVG('cup4', '运动水杯')">下载图片</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function downloadSVG(cupId, cupName) {
+            // 获取对应的SVG元素
+            const svgElement = document.querySelector(`#${cupId} .cup-svg`) || 
+                              document.querySelectorAll('.cup-svg')[parseInt(cupId.replace('cup', '')) - 1];
+            
+            if (!svgElement) {
+                alert('未找到SVG元素');
+                return;
+            }
+            
+            // 创建一个新的SVG元素用于下载
+            const svgClone = svgElement.cloneNode(true);
+            svgClone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+            
+            // 将SVG转换为字符串
+            const svgData = new XMLSerializer().serializeToString(svgClone);
+            
+            // 创建Blob对象
+            const svgBlob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+            
+            // 创建下载链接
+            const downloadLink = document.createElement('a');
+            downloadLink.href = URL.createObjectURL(svgBlob);
+            downloadLink.download = `${cupName}.svg`;
+            
+            // 触发下载
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+            
+            // 释放URL对象
+            URL.revokeObjectURL(downloadLink.href);
+            
+            alert(`${cupName} 已开始下载！`);
+        }
+        
+        // 页面加载完成后的提示
+        window.addEventListener('load', function() {
+            console.log('杯子图片集合已加载完成！');
+        });
+    </script>
+</body>
+</html>
+
+
